@@ -4,9 +4,9 @@
 baseurl:
 url: http://liuzhudong.github.io
 date_format: "ordinal"
-title: LZD
-subtitle: "打码改变人生"
-description: "个人博客、记录、笔记"
+title: JellyLiu Blog
+subtitle: "刘柱栋的网络日志"
+description: "刘柱栋的网络日志、个人博客、记录、笔记"
 keywords: liuzhudong, 刘柱栋, jelly, jellyliu, 记录, 博客, 笔记
 favicon: /favicon.ico
 timezone: Asia/Shanghai
@@ -17,8 +17,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Jelly Liu
-organization: 
-organization_url: 
+# organization:
+# organization_url:
 github_username: Liuzhudong
 location: Liuzhudong, China
 email: liuzhudong57@126.com
@@ -34,14 +34,14 @@ navs:
   -
     href: /categories/
     label: 分类
+  #
+  # -
+  #   href: /wiki/
+  #   label: 维基
 
-  -
-    href: /wiki/
-    label: 维基
-
-  -
-    href: /links/
-    label: 链接
+  # -
+  #   href: /links/
+  #   label: 链接
 
   -
     href: /about/
@@ -73,10 +73,10 @@ gems:
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+# collections:
+#     wiki:
+#         output: true
+#         permalink: /wiki/:path/
 
 repository: liuzhudong/liuzhudong.github.io
 
@@ -84,19 +84,19 @@ repository: liuzhudong/liuzhudong.github.io
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment
-comments_provider: gitment
+# comments_provider: gitment
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
     username: liuzhudong
 # https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: liuzhudong
-    repo: 
-    oauth:
-        client_id: 
-        client_secret: 
+# gitment:
+#     owner: liuzhudong
+#     repo:
+#     oauth:
+#         client_id:
+#         client_secret:
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : true
 
