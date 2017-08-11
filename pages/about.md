@@ -1,14 +1,20 @@
 ---
 layout: page
-title: About
-description: 开始记录
+title: 关于我的介绍
+description: 关于我
 keywords: liuzhudong, 刘柱栋, jellyliu, jelly
 comments: false
 menu: 关于
 permalink: /about/
 ---
 
-## Skill Keywords
+有助于你进一步了解我哦。
+
+# 我的简介
+我是一个什么的人。
+
+## 技能
+我会那些技能，能做什么事。
 
 {% for category in site.data.skills %}
 ### {{ category.name }}

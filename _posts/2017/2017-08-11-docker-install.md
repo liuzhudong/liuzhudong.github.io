@@ -47,7 +47,6 @@ $ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 
-
 $ sudo apt-get update
 ## 安装最新版本
 $ sudo apt-get install docker-ce
