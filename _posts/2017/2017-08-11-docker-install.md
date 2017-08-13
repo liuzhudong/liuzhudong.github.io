@@ -1,18 +1,16 @@
 ---
 layout: post
 title: Docker 安装
-categories:
-  - docker
-  - Linux
-  - ubuntu
-  - 记录
+categories: Docker
 description: 记录ubuntu下的docker安装
 keywords: 'docker install, ubuntu'
 ---
 
 记录ubuntu下的docker安装。
 
-# Docker 安装
+# Docker 安装配置
+
+## Docker 安装
 基于服务器系统: Ubuntu 16.04.2 LTS
 
 按下列命令执行:
@@ -54,9 +52,42 @@ $ sudo apt-get install docker-ce
 $ sudo apt-get install docker-ce=<VERSION>
 ## 查看有哪些版本可安装
 $ apt-cache madison docker-ce
+## 查看安装的 Docker 版本
+$ docker verion
+```
+至此 Docker 就安装成功。
+
+## 配置
+### 阿里云加速设置
+通过修改daemon配置文件/etc/docker/daemon.json来使用加速器。
 
 ```
+$ sudo mkdir -p /etc/docker
+$ sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://c5xdtexs.mirror.aliyuncs.com"]
+}
+EOF
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+```
+具体的阿里云加速地址见自己阿里云提供的地址。
+> [https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
 
+## docker-compose 安装
+```sh
+$ sudo apt install docker-compose
+$ docker-compose version
+```
+
+## 问题&解决
+### Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+```
+$ ls -l /var/run/docker.sock
+srw-rw---- 1 root docker 0 Nov 27 05:56 /var/run/docker.sock
+// 就是修改高于660的权限即可
+$ sudo chmod 666 /var/run/docker.sock
+```
 
 ## 参考
 * [https://docs.docker.com/engine/installation/#time-based-release-schedule](https://docs.docker.com/engine/installation/#time-based-release-schedule)

@@ -1,9 +1,9 @@
 ---
-layout: "post"
-title: "Mysql 数据库初始化配置"
-categories: [mysql, 记录]
+layout: post
+title: Mysql 数据库初始化配置
+categories: Mysql
 description: Mysql 数据库初始化配置及相关操作记录
-keywords: mysql, server, 数据库
+keywords: 'mysql, server, 数据库'
 ---
 
 Mysql 数据库初始化配置及相关操作记录。
