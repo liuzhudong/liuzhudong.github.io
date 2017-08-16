@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Ubuntu服务软件安装"
-categories: [ubuntu server, 记录]
+categories: [记录]
 description: "记录最近安装Ubuntu server(16.04.2 LTS)的一些服务器软件"
 keywords: ubuntu server, 软件安装, docker, nodejs
 ---
