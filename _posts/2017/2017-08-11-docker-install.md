@@ -15,7 +15,7 @@ keywords: 'docker install, ubuntu'
 
 按下列命令执行:
 ```sh
-$ sudo apt-get remove docker.io docker docker-engine
+$ sudo apt-get remove docker-ce docker.io docker docker-engine
 
 $ sudo apt-get update
 
@@ -53,7 +53,7 @@ $ sudo apt-get install docker-ce=<VERSION>
 ## 查看有哪些版本可安装
 $ apt-cache madison docker-ce
 ## 查看安装的 Docker 版本
-$ docker verion
+$ docker version
 ```
 至此 Docker 就安装成功。
 
