@@ -58,7 +58,7 @@ TIMED_WAITING, // 限期等待
 TERMINATED; // 结束，线程已经结束执行
 ```
 线程状态转换关系图:
-![thread-status](images/java-thread-status.jpg)
+![thread-status](http://blog.liuzhudong.com/images/java-thread-status.jpg)
 
 ## 线程的属性和方法
 ### 设置优先级
