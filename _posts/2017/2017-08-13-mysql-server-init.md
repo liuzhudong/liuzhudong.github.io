@@ -41,7 +41,7 @@ mysql> flush privileges;
 // 创建数据库
 mysql> CREATE DATABASE IF NOT EXISTS lr_block_data;
 //授权lx_block_root用户拥有lr_block_data数据库的所有权限。
-mysql> grant all privileges on lr_block_data.* to lx_block_root@"%" identified by 'root123!!!';
+mysql> grant all privileges on  lr_block_data.* to lx_block_root@"%" identified by 'root123!!!';
 // 刷新系统权限
 mysql> flush privileges;
 
