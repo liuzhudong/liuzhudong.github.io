@@ -1,20 +1,20 @@
 ---
 layout: post
-title: 深入理解 Java volatile关键字
+title: 深入理解 Java Volatile关键字
 categories: [Java]
-description: 深入理解 Java volatile关键字
+description: 深入理解 Java Volatile关键字
 keywords: java, volatile
 ---
 
-深入理解 Java volatile关键字，必须先要理解java的内存工作模式。
+深入理解 Java Volatile 关键字，必须先要理解 Java 的内存工作模式。
 
-* [Java内存模型]()
+* [ Java 内存模型]()
 
-## volatile 关键字
-volatile是java提供的最轻量级的同步机制。
-其作用是保证一个变量在任何线程读写都是与主内存是同步的，即线程A更新了volatile变量M的值，线程B在使用volatile变量M时能获取到最新的值（即和线程A的变量M值是一致的），即所谓的可见性。
+## Volatile 关键字
+volatileJ是 Java 提供的最轻量级的同步机制。
+其作用是保证一个变量在任何线程读写都是与主内存是同步的，即线程A更新了 volatile 变量M的值，线程B在使用volatile 变量M时能获取到最新的值（即和线程A的变量M值是一致的），即所谓的可见性。
 
-### volatile内存操作的特殊规则
+### Volatile内存操作的特殊规则
 volatile变量之所以能在多线程中保持变量可见性，是由于java内存模型对于volatile变量专门定义了一些特殊规则，
 从而java虚拟机在编译和运行时都会对其进行特殊处理。
 
@@ -43,3 +43,6 @@ volatile变量的读操作的性能消耗与普通变量几乎没什么差别
 volatile变量写操作会比普通变量慢一些，因为在写操作时插入许多内存屏障指令来保证有序执行
 ```
 
+## 参考
+* 深入理解 Java 虚拟机（第12章 Java 内存模型与线程 12.3 Java 内存模型）
+* Java 并发编程实战（第3章 对象的共享 3.1.4 Volatile 变量）
