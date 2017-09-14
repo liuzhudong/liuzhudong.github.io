@@ -8,7 +8,7 @@ keywords: java, volatile
 
 深入理解 Java Volatile 关键字，必须先要理解 Java 的内存工作模式。
 
-* [ Java 内存模型]()
+* [ Java 内存模型](http://blog.liuzhudong.com/2017/09/13/java-memory-model/)
 
 ## Volatile 关键字
 volatileJ是 Java 提供的最轻量级的同步机制。
