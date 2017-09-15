@@ -10,11 +10,11 @@ keywords: java, volatile
 
 * [ Java 内存模型](http://blog.liuzhudong.com/2017/09/13/java-memory-model/)
 
-## Volatile 关键字
+# Volatile 关键字
 volatileJ是 Java 提供的最轻量级的同步机制。
 其作用是保证一个变量在任何线程读写都是与主内存是同步的，即线程A更新了 volatile 变量M的值，线程B在使用volatile 变量M时能获取到最新的值（即和线程A的变量M值是一致的），即所谓的可见性。
 
-### Volatile内存操作的特殊规则
+## Volatile内存操作的特殊规则
 volatile变量之所以能在多线程中保持变量可见性，是由于java内存模型对于volatile变量专门定义了一些特殊规则，
 从而java虚拟机在编译和运行时都会对其进行特殊处理。
 
@@ -31,7 +31,7 @@ PS: 内存操作指令参见java内存模型
 
 但是volatile变量是非原子性的，所以在多线程下，线程A读取的volatile变量在操作过程中线程B有可能已经重新刷新了主内存，导致线程A操作之后的赋值写入主内存时覆盖线程B的值。从而导致结果最后不能达到期望。
 
-### 对比
+## 对比
 * 同步机制和锁比较
 ```
 volatile的同步机制在性能上要优于锁（synchronize关键字或java.util.concurrent包里面的锁）
