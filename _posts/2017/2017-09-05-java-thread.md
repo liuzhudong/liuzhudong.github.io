@@ -72,6 +72,19 @@ public final void setPriority(int newPriority)
 public static native void sleep(long millis) throws InterruptedException;
 public static void sleep(long millis, int nanos) throws InterruptedException
 ```
+可以使用TimeUnit的sleep方法
+```java
+TimeUnit.MILLISECONDS.sleep(500L);
+// 内部实现还是调用Thread.sleep()实现的,源码如下
+public void sleep(long timeout) throws InterruptedException {
+    if (timeout > 0) {
+        long ms = toMillis(timeout);
+        int ns = excessNanos(timeout, ms);
+        Thread.sleep(ms, ns);
+    }
+}
+```
+
 当前线程睡眠/millis的时间（millis指定睡眠时间是其最小的不执行时间，因为sleep(millis)休眠到达后，无法保证会被JVM立即调度）；sleep()是一个静态方法(static method) ，所以他不会停止其他的线程也处于休眠状态；线程sleep()时不会失去拥有的对象锁。作用：保持对象锁，让出CPU，调用目的是不让当前线程独自霸占该进程所获取的CPU资源，以留一定的时间给其他线程执行的机会；
 
 ### yield
@@ -82,7 +95,7 @@ public static native void yield();
 
 它仅能是一个线程从运行状态转换到可运行状态，而不是等待或阻塞状态。
 
-###　join
+### join
 ```java
 public final void join() throws InterruptedException
 
@@ -93,13 +106,15 @@ public final synchronized void join(long millis, int nanos)　throws Interrupted
 ```
 使用该方法的线程会在此之间执行完毕后再往下继续执行。
 
+## 特殊的线程方法
 ### object.wait()
 ```java
 // 存在对象
 Object obj ;
 // 使用
 synchronized(obj){
-    obj.wait();
+    obj.wait(); // 无限等待
+    obj.wait(1000L); // 设定等待超时时间（有限等待）
 }
 ```
 当一个线程执行到wait()方法时，他就进入到一个和该对象相关的等待池(Waiting Pool)中，同时失去了对象的机锁—暂时的，wait后还要返还对象锁。当前线程必须拥有当前对象的锁，如果当前线程不是此锁的拥有者，会抛出IllegalMonitorStateException异常,所以wait()必须在synchronized 代码块中调用。
