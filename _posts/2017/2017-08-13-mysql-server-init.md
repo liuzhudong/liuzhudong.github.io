@@ -55,3 +55,14 @@ PS:
 > 如果在sql脚本文件中使用了use 数据库，则-D数据库选项可以忽略 <br />
 > 如果【Mysql的bin目录】中包含空格，则需要使用“”包含，如：“C:\Program Files\mysql\bin\mysql” –u用户名 –p密码 –D数据库<【sql脚本文件路径全名】
 >
+
+## mysql 解决插入0000-00-00日期失败问题
+```sh
+show variables like '%sql_mode%';
+## 结果
+| sql_mode      | ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |
+
+## 更新 去掉:NO_ZERO_IN_DATE,NO_ZERO_DATE
+set global sql_mode="ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION";
+
+```

@@ -36,6 +36,12 @@ $ sudo apt search docker
 ```
 以Ubuntu 16.04.2 LTS 为例
 
+## nodejs 安装
+```sh
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs
+```
+
 ## npm & nodejs
 ```sh
 // npm 安装
