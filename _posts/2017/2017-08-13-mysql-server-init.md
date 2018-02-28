@@ -101,4 +101,26 @@ sudo mv /var/lib/mysql/* /data/mysqldata # 把原来的/var/lib/mysql下的数�
 sudo service mysql start # 启
 ```
 
+## ubuntu下卸载mysql
+
+```
+sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get autoremove mysql-server
+sudo apt-get remove mysql-common  (非常重要)
+
+## 上面的其实有一些是多余的，建议还是按照顺序执行一遍
+## 清理残留数据
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+
+```
+
+## 检查 mysql 服务是否运行
+
+```
+sudo netstat -tap | grep mysql
+```
+
+
+
 
