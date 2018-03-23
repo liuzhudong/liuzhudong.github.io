@@ -1,7 +1,7 @@
 ---
 layout: categories
-title: Categories
-description: 日志分类
+title: 文档分类
+description: 文档分类
 keywords: 分类
 comments: false
 menu: 分类
