@@ -110,7 +110,7 @@ sudo apt-get install mysql-server
 
 ### 配置mysql
 
-[mysqld.cnf](http://blog.liuzhudong.com/files/config/mysql/mysqld.cnf)
+[mysqld.cnf](http://blog.liuzhudong.com/files/config/mysql/mysqld.conf)
 
 ```sh
 # 禁止apparmor限制mysqld的读写
