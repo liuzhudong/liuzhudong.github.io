@@ -2,7 +2,7 @@
 layout: post
 title: Docker 安装
 categories: Docker
-description: 记录ubuntu下的docker安装
+description: 记录 ubuntu 下的 docker 安装
 keywords: 'docker install, ubuntu'
 ---
 
