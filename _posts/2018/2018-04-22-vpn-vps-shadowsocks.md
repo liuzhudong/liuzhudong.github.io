@@ -21,7 +21,7 @@ https://www.vultr.com
 
 * 账户充值，使用支付宝
 
-![account bill](http://blog.liuzhudong.com/images/vpn/20180422/02.png)
+![account bill](http://blog.liuzhudong.com/images/vpn/20180422/02.jpg)
 
 * 创建Server
 
