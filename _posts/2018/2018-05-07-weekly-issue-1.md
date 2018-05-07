@@ -12,9 +12,9 @@ keywords: 每周记录
 
 简单了解了一下 java NIO 的知识点。找了一些关于 java NIO 的 code example。发现网上比较多的还是关于网络连接的部分，很少关于文件读写操作的文章。
 
-本次搜索的目的是想实现有些配置写在文件，而现有的数据写入文件采用的还是之前的 BIO 模式读写。
+本次搜索的目的是想实现有些配置写在文件，而现有的数据写入文件采用的还是之前的 BIO 模式读写。:star2:
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [NIO 教程 http://wiki.jikexueyuan.com/project/java-nio-zh/java-nio-overview.html](http://wiki.jikexueyuan.com/project/java-nio-zh/java-nio-overview.html)
 * [NIO 网络实例 https://blog.csdn.net/chenxuegui1234/article/details/17979725](https://blog.csdn.net/chenxuegui1234/article/details/17979725)
