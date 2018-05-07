@@ -31,7 +31,7 @@ jar运行方式：
 java -jar xx.jar --spring.profiles.active=prod
 ```
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [https://www.jianshu.com/p/fef49d5b380c](https://www.jianshu.com/p/fef49d5b380c)
 * [https://www.jianshu.com/p/948c303b2253](https://www.jianshu.com/p/948c303b2253)
@@ -65,7 +65,7 @@ public class Start implements CommandLineRunner {
 }
 ```
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [https://blog.csdn.net/lxh18682851338/article/details/78559595](https://blog.csdn.net/lxh18682851338/article/details/78559595)
 
@@ -89,7 +89,7 @@ public ConnectionSettings connectionSettings(){
 
 ```
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [https://blog.csdn.net/yingxiake/article/details/51263071](https://blog.csdn.net/yingxiake/article/details/51263071)
 
@@ -114,7 +114,7 @@ ssh  root@192.168.17.190 // 检验是否需要密码登录其他服务器
 
 ```
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [https://blog.csdn.net/An342647823/article/details/7245471](https://blog.csdn.net/An342647823/article/details/7245471)
 
@@ -149,7 +149,7 @@ eeooff
 
 ```
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [http://www.3mu.me/linux中的shell用ssh自动登录远程服务器后执行命令并自动/](http://www.3mu.me/linux中的shell用ssh自动登录远程服务器后执行命令并自动/)
 * [http://www.cnblogs.com/ilfmonday/p/ShellRemote.html](http://www.cnblogs.com/ilfmonday/p/ShellRemote.html)
@@ -167,7 +167,7 @@ eeooff
 
 从 IO 效率上,前一条命令的效率要比后面一条的命令效率要低,所以在编写shell脚本的时候,较多的时候我们会用 `command > file 2>&1` 这样的写法.
 
-🐶相关文章：
+:dog: 相关文章：
 
 * [http://blog.51cto.com/viplin/99568](http://blog.51cto.com/viplin/99568)
 
@@ -188,7 +188,7 @@ rsync是一个功能非常强大的工具，其命令也有很多功能特色选
 
 rysnc 的官方网站：[http://rsync.samba.org/](http://rsync.samba.org/)，可以从上面得到最新的版本。关于rsync算法的介绍点 [这里](http://rsync.samba.org/tech_report/node2.html)，还有 [陈皓blog](https://coolshell.cn/articles/7425.html)。
 
-使用实例:
+:beer: 使用实例:
 
 ```js
 rsync -avz --progress --chmod=Du=rwx,Dog=rx,Fug=rw,Fo=r \
@@ -204,7 +204,7 @@ rsync -avz --progress --chmod=Du=rwx,Dog=rx,Fug=rw,Fo=r \
 // --include-from=FILE 不排除FILE指定模式匹配的文件
 ```
 
-🐶 相关文章：
+:dog: 相关文章：
 
 * [https://blog.csdn.net/daniel_ustc/article/details/18005925](https://blog.csdn.net/daniel_ustc/article/details/18005925)
 
