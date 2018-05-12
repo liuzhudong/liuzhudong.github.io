@@ -35,6 +35,11 @@ navs:
   -
     href: /categories/
     label: 分类
+
+  -
+    href: /2018/05/12/weekly-issue-list/
+    label: 每周记录系列
+    
   #
   # -
   #   href: /wiki/
@@ -44,9 +49,9 @@ navs:
   #   href: /links/
   #   label: 链接
 
-  -
-    href: /about/
-    label: 关于
+#   -
+#     href: /about/
+#     label: 关于
 
 # ---------------- #
 #       RSS        #
