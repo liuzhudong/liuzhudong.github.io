@@ -66,5 +66,41 @@ Google 搜索 `sqoop mysql to hive 增量同步`
 * [使用sqoop工具进行数据表增量导入](https://blog.csdn.net/xichenguan/article/details/39054183)
 * [sqoop定时增量导入](https://blog.csdn.net/ryantotti/article/details/14226635)
 
+# Spring容器中的Bean几种初始化方法和销毁方法的先后顺序
+
+在spring 初始化或销毁 bean 对象时的一些 `init` 或 `shutdown` 操作。
+
+```js
+// spring 配置实现
+// 通过实现InitializingBean/DisposableBean 接口来定制初始化之后/销毁之前的操作方法；
+// 通过<bean> 元素的 init-method/destroy-method属性指定初始化之后 /销毁之前调用的操作方法；
+// 在指定方法上加上@PostConstruct或@PreDestroy注解来制定该方法是在初始化之后还是销毁之前调用。
+
+// spring 执行优先顺序
+// Bean在实例化的过程中：Constructor > @PostConstruct >InitializingBean > init-method
+// Bean在销毁的过程中：@PreDestroy > DisposableBean > destroy-method
+```
+
+:beer: 相关文章：
+
+* [Spring容器中的Bean几种初始化方法和销毁方法的先后顺序](https://blog.csdn.net/caihaijiang/article/details/8629725)
+* [通过Spring @PostConstruct 和 @PreDestroy 方法 实现初始化和销毁bean之前进行的操作](https://blog.csdn.net/topwqp/article/details/8681497)
+* [源码解析：init-method、@PostConstruct、afterPropertiesSet孰先孰后](http://sexycoding.iteye.com/blog/1046993)
+
+# JAVA NIO 实现遍历一个文件夹
+
+BIO 下 `file.list()` 同样的效果在 NIO 的实现。
+
+```java
+final List<Path> files = new LinkedList<>();
+Path certificatePath = Paths.get(mspBasePath, key);
+try (Stream<Path> ds = Files.list(certificatePath)) {
+    Iterator<Path> paths = ds.iterator();
+    while (paths.hasNext()) {
+        files.add(paths.next());
+    }
+}
+```
 
 ===
+-END- :v:
