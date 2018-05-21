@@ -102,5 +102,40 @@ try (Stream<Path> ds = Files.list(certificatePath)) {
 }
 ```
 
+# Spring boot 整合 Dubbo
+
+记录 spring boot 整合 dubbo 的实现。
+
+:sunny: 相关文章：
+
+* [Spring-boot:5分钟整合Dubbo构建分布式服务](https://www.cnblogs.com/jaycekon/p/SpringBootDubbo.html)
+* [dubbo-spring-boot-starter GitHub ](https://github.com/alibaba/dubbo-spring-boot-starter)
+
+# kubernetes 安装
+
+这一周研究了一下用 `kubeadm` 安装 k8s集群。
+
+安装部署相关配置和文档在这里：[k8s-install](https://github.com/liuzhudong/k8s-install)
+
+接下来需要深入的了解一下 kubernetes 的架构和相关文档。
+
+:smail: 相关文章：
+
+* [这个人里面有好几篇关于 kubernetes 相关的文章](https://blog.frognew.com)
+* [Kubernetes1.10中部署dashboard以及常见问题解析](https://www.kubernetes.org.cn/3834.html)
+* [Kubernetes 中文文档](https://www.kubernetes.org.cn/k8s)
+* [Kubernetes 官方文档](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)
+
+# Docker commit 命令
+
+`docker commit` 命令可以用来基于当前正在 `running` 的 docker 容器创建镜像。
+
+```js
+docker ps
+// dccb1deca0e1 nginx "nginx -g 'daemon ..."   3 days ago Up 3 days     nginx
+
+docker commit dccb1deca0e1 nginx:v1.2-test
+```
+
 ===
 -END- :v:
