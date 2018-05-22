@@ -59,5 +59,39 @@ System.out.println(object.toString()); // 1.6094379124341003
 
 * [主题：Aviator——开源轻量级、高性能的表达式求值器](http://www.iteye.com/topic/701496)
 
+# Java 中 StringBuilder 清空方法
+
+清空有3种方法：
+
+1. 新生成一个，旧的由系统自动回收
+2. 使用delete
+3. 使用setLength
+
+```java
+// 新生成一个，旧的由系统自动回收
+StringBuilder strb ;
+int size = 16;
+for(){
+    strb = new StringBuilder(size);
+}
+
+// 使用delete
+StringBuilder strb = new StringBuilder(size);
+for(){
+    strb.delete(0,strb.length());
+}
+
+// 使用setLength
+StringBuilder strb = new StringBuilder(size);
+for(){
+    strb.setLength(0);
+}
+
+```
+
+# Kubernetes 入门指南
+
+一篇介绍 Kubernetes 的文章：[Kubernetes 入门指南](http://senlinzhan.github.io/2017/11/27/k8s/)
+
 ===
 -END- :v:
