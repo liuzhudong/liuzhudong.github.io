@@ -93,5 +93,24 @@ for(){
 
 一篇介绍 Kubernetes 的文章：[Kubernetes 入门指南](http://senlinzhan.github.io/2017/11/27/k8s/)
 
+# Hive UNION 使用
+
+hive union 或 union all 将多个SELECT语句的结果集合并为一个独立的结果集。
+
+语法定义：
+
+```sql
+select_statement UNION [ALL | DISTINCT] select_statement UNION [ALL | DISTINCT] select_statement ...
+```
+
+```js
+// 格式
+select * from a
+union (union all)
+select * from b;
+```
+
+union 和 union all 的区别是，union 会对多个结果集进行去重复处理。
+
 ===
 -END- :v:
