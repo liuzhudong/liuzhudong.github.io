@@ -112,5 +112,36 @@ select * from b;
 
 union 和 union all 的区别是，union 会对多个结果集进行去重复处理。
 
+# Git 查看各个 branch 之间的关系图
+
+```js
+git log --graph --decorate --oneline --simplify-by-decoration --all
+// 说明：
+// --decorate 标记会让git log显示每个commit的引用(如:分支、tag等)
+// --oneline 一行显示
+// --simplify-by-decoration 只显示被branch或tag引用的commit
+// --all 表示显示所有的branch，这里也可以选择，比如我指向显示分支AB的关系，则将--all替换为branchA branchB
+```
+
+# Docker volume 不能使用相对路径
+
+```js
+docker run -v data:/data image:tag // data 这里docker会当做 volume 的name不是一个路径
+docker run -v ./data:/data image:tag // 会报错
+docker run -v ~/work/data:/data image:tag //使用绝对路径
+```
+
+PS:
+
+* 使用相对路径，比如 `-v tmp:/var/output`，会将 tmp-rpm 解释成为 volume 的 name
+* 使用相对路径并且带 `/` ，比如 `cd ~`再 `-v workspace/tmp:/var/output`，会报错，因为 volume name 只允许 `[a-zA-Z0-9][a-zA-Z0-9_.-]`
+* 使用绝对路径，比如 `-v ~/workspace/tmp:/var/output`，会正确地将 tmp 文件夹映射到容器里面
+* 为什么不能使用相对路径呢，原因：docker cli 和 docker daemon 可能不在一台机器上，那么就无法解析相对路径。
+
+:beer: 相关文章：
+
+* [docker volume 使用相对路径](https://sfwn.me/2017/02/12/docker-volume-relative-path/)
+
+
 ===
 -END- :v:
