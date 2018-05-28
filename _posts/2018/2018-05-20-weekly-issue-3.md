@@ -61,7 +61,7 @@ Google 搜索 `sqoop mysql to hive 增量同步`
 
 想解决的问题：用 sqoop 实现 mysql 数据库表数据增量同步到 hive 表，而不是每次全量同步。
 
-:smail: 相关文章：
+:smile: 相关文章：
 
 * [使用sqoop工具进行数据表增量导入](https://blog.csdn.net/xichenguan/article/details/39054183)
 * [sqoop定时增量导入](https://blog.csdn.net/ryantotti/article/details/14226635)
