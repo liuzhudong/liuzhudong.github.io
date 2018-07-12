@@ -74,6 +74,16 @@ $ sudo systemctl restart docker
 具体的阿里云加速地址见自己阿里云提供的地址。
 > [https://dev.aliyun.com/search.html](https://dev.aliyun.com/search.html)
 
+### 修改 docker 数据存放路径
+
+```sh
+sudo systemctl stop docker
+sudo vim /lib/systemd/system/docker.service
+#ExecStart=/usr/bin/dockerd -H fd:// 这项后面追加 --graph=/data/docker 并保存
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 ## docker-compose 安装
 ```sh
 $ sudo apt install docker-compose
